@@ -829,7 +829,14 @@ background-color: blue;*/
   top:20px
 }
 
-.hand1 {
+.hand1  {
+      transform:rotate(130deg);
+    /*transform-origin:60% 40%;*/
+      -ms-transform:rotate(130deg); /* IE 9 */
+      -webkit-transform:rotate(130deg); /* Safari and Chrome */
+      -moz-transform:rotate(130deg);
+      -o-transform:rotate(130deg);
+      float: left;
     -webkit-animation: 2s infinite wave linear;
     -moz-animation: 2s infinite wave linear;
     -o-animation: 2s infinite wave linear;
@@ -838,7 +845,7 @@ background-color: blue;*/
     -webkit-transform-origin: 70% 50%; /* Chrome, Safari, Opera */
     -o-transform-origin: 70% 50%;
     -moz-transform-origin: 70% 50%;
-    transform-origin: 70% 50%;
+    transform-origin: 70% 50%;  /*70% 50%*/
 }
 
 @keyframes wave
@@ -894,15 +901,6 @@ background-color: blue;*/
       z-index: 1;
   }
 
-.hand1{
-    transform:rotate(130deg);
-  /*transform-origin:60% 40%;*/
-    -ms-transform:rotate(130deg); /* IE 9 */
-    -webkit-transform:rotate(130deg); /* Safari and Chrome */
-    -moz-transform:rotate(130deg);
-    -o-transform:rotate(130deg);
-    float: left;
-}
 
 .hand2 {
     transform:rotate(-130deg);
@@ -1248,4 +1246,219 @@ background-color: blue;*/
   to {
     width: 180px;
   }
+}
+
+.fog {
+  /*position: absolute;
+  width:100%;
+  height: 100%;
+
+background: -moz-linear-gradient(top,  rgba(226,226,226,0.61) 0%, rgba(245,245,245,0.61) 2%, rgba(254,254,254,0.61) 3%, rgba(219,219,219,0.8) 50%, rgba(209,209,209,0.81) 53%, rgba(254,254,254,1) 100%);
+background: -webkit-linear-gradient(top,  rgba(226,226,226,0.61) 0%,rgba(245,245,245,0.61) 2%,rgba(254,254,254,0.61) 3%,rgba(219,219,219,0.8) 50%,rgba(209,209,209,0.81) 53%,rgba(254,254,254,1) 100%); 5
+background: linear-gradient(to bottom,  rgba(226,226,226,0.61) 0%,rgba(245,245,245,0.61) 2%,rgba(254,254,254,0.61) 3%,rgba(219,219,219,0.8) 50%,rgba(209,209,209,0.81) 53%,rgba(254,254,254,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ce2e2e2', endColorstr='#fefefe',GradientType=0 );
+
+z-index: 10;
+
+-webkit-animation: fog-move 10s ease-in-out infinite alternate;
+animation: fog-move 10s linear ease-in-out alternate;
+animation-iteration-count: 1;*/
+}
+
+/*@keyframes fog-move {
+  from {
+    transform: translateX(1500px);
+  }
+  to {
+    transform: translateX(-700px);
+  }
+}*/
+
+audio {
+  position: absolute;
+}
+
+#nature {
+bottom: 0px;
+}
+
+#funk {
+  visibility: hidden;
+  bottom: 0px;
+  left:350px;
+}
+
+.talk {
+  position:absolute;
+}
+
+.welcome, .rules, .timesup, .stopGame, .minuspoints, .speedup1, .speedup2 {
+  display: inline-block;
+  left:-200px;
+  width:300px;
+  height:200px;
+  z-index: 1;
+}
+
+.welcomescale {
+  -webkit-animation: hello 0.9s ease-in-out infinite alternate;
+  animation: hello 0.9s ease-in-out infinite alternate;
+  animation-iteration-count: 1;
+}
+
+.rules {
+  z-index: 2;
+}
+
+.stopGame, .minuspoints, .speedup1, .speedup2 {
+  z-index:3;
+}
+
+.rulesscale {
+  -webkit-animation: rules 0.9s ease-in-out infinite alternate;
+  animation: rules 0.9s ease-in-out infinite alternate;
+  animation-iteration-count: 1;
+}
+
+@keyframes hello {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes rules {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.welcome, .rules, .timesup, .stopGame, .minuspoints, .speedup1, .speedup2 {
+	position: absolute;
+	background: #ffffff;
+	border: 4px solid #191919;
+  border-radius: 25%;
+}
+.welcome:after, .welcome:before, .rules:after, .rules:before, .timesup:after, .timesup:before, .stopGame:after, .stopGame:before, .minuspoints:after, .minuspoints:before, .speedup1:after, .speedup1:before, .speedup2:after, .speedup2:before  {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.welcome:after, .rules:after, .timesup:after, .stopGame:after, .minuspoints:after, .speedup1:after, .speedup2:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 20px;
+	margin-top: -20px;
+}
+.welcome:before, .rules:before, .timesup:before, .stopGame:before, .minuspoints:before, .speedup1:before, .speedup2:before {
+	border-color: rgba(25, 25, 25, 0);
+	border-left-color: #191919;
+	border-width: 26px;
+	margin-top: -26px;
+}
+
+#welcometext, #timesuptext, #stopGametext, #minuspointstext, #speedup1text, #speedup2text {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align:center;
+  /*line-height: 200px;*/
+  /*padding-left: 25px;*/
+  display: inline-block;
+  font-size:25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  /*border:1px solid black;*/
+}
+
+#timesuptext {
+  line-height: 45px;
+  font-size:30px;
+}
+
+#stopGametext, #minuspointstext {
+  line-height: 40px;
+  font-size:30px;
+}
+
+#minuspointstext {
+  line-height: 35px;
+  font-size:20px;
+}
+
+#speedup1text {
+  line-height: 45px;
+  font-size:35px;
+}
+
+#speedup2text {
+  line-height: 65px;
+  font-size:30px;
+}
+
+.hello {
+  color:orange;
+}
+
+.start {
+  color: blue;
+  font-size:30px;
+}
+
+.reset {
+  color: red;
+  font-size:30px;
+}
+
+.gotorules {
+  font-size:15px;
+  font-style: oblique;
+}
+
+#rulestext {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align:center;
+  /*line-height: 200px;*/
+  /*padding-left: 25px;*/
+  display: inline-block;
+  font-size:17px;
+  text-transform: uppercase;
+  font-weight: bold;
+  /*border:1px solid black;*/
+}
+
+
+.moletext, .boytext, .rabbittext, .points {
+  color:red;
+  font-size: 20px;
+}
+
+.boytext {
+  color:yellow;
+}
+
+.rabbittext {
+  color:grey;
+}
+
+.points {
+  color:#3cfe06;
+}
+
+.bye {
+  color:#0128b7;
+  font-size: 15px;
+}
+
+.restartGame, .toomany {
+  color:red;
 }

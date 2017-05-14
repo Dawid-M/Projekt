@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+<audio src="Music/Nature Ambiance-SoundBible.com-1444637890.mp3" id="nature" controls loop autoplay>
+  <embed name="nature" src="Music/Nature Ambiance-SoundBible.com-1444637890.mp3" width="150" height="60" loop="true" hidden="false" autostart="true">
+    <p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio>
+<audio src="Music/Cold Funk.mp3" id="funk" controls loop>
+  <embed name="coldfunk" src="Music/Cold Funk.mp3" width="150" height="60" loop="true" hidden="false" autostart="true">
+  <p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio>
+<div class="message">
+  <div class="loser"></div>
+  <div class="quit"></div>
+</div>
+  <div class="fog"></div>
   <div class="flag">
     <div class="knob"></div>
     <div class="pole"></div>
@@ -49,6 +62,40 @@
                 </div>
       </div>
       <div class="container3">
+        <div class="talk">
+          <div class="welcome" id="welcometext">
+            <span class="hello">Hello!!!</span></br>
+            Press <span class="start">Start</span> to begin and <span class="reset">Reset</span> to stop a game</br>
+            <span class="gotorules">Click here to see the rules</span>
+          </div>
+                <div class="rules" id="rulestext">
+                  Hit a <span class="moletext">mole</span> to get <span class="points">100 </span>points,
+                  hit a <span class="boytext">boy</span> to get <span class="points">500 </span>points.</br>
+                  Hitting a <span class="rabbittext">rabbit</span> you will be punished with <span class="points">minus 1000 </span>points</br>
+                  <span class="bye">Click here and press Start</span>
+                </div>
+                      <div class="timesup" id="timesuptext">
+                        Oh no!!!</br><span class="">Time's up</span></br>
+                        <span class="restartGame">Click here to Restart</span>
+                      </div>
+                            <div class="stopGame" id="stopGametext">
+                              Why have you stopped?</br><span class="">Too hard?</span></br>
+                              <span class="restartGame">Click here to Restart</span>
+                            </div>
+                            <div class="minuspoints" id="minuspointstext">
+                              Oh no!!! <span class="toomany"></br>Too many minus points!</span></br>
+                              Seems you don't like rabbits.</br>
+                              <span class="restartGame">Click here to Restart</span>
+                            </div>
+                                  <div class="speedup1" id="speedup1text">
+                                    So far, so good!</br>
+                                    Let's speed up a little
+                                  </div>
+                                        <div class="speedup2" id="speedup2text">
+                                          It's too easy!</br>
+                                          Let's push it to the next level
+                                        </div>
+        </div>
           <button id="myButton">Start!</button>
           <button id="myButtonStop">Reset!</button>
             <div id="menuMole">
