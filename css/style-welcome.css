@@ -1,0 +1,22 @@
+/* Resetowanie ustawień domyślnych! Przydatne! */
+* {
+padding: 0;
+margin: 0;
+}
+
+@font-face {
+    font-family: 'Comic';
+    src: url('../Font/SF_Slapstick_Comic.ttf') format('truetype');
+}
+
+html {
+  font-family: 'Comic', Fallback, sans-serif;
+  font-size: 50px;
+  color:red;
+}
+
+.click {
+  font-family: 'Comic', Fallback, sans-serif;
+  font-size: 70px;
+  color:blue;
+}

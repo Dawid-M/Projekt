@@ -16,9 +16,11 @@ margin: 0;
 
 html, body {
   /*background-image:url('../images/grass-clipart-cliparti1_grass-clip-art_03.jpg');*/
-  cursor:url('../images/mallet_small.png'), auto;
+  cursor:url('../images/mallet_small.png'), auto, pointer;
   /*cursor:url('../images/cursor.cur'), auto;*/
   /*height:100%;*/
+  /*width:1366px;
+  height:768px;*/
 }
 
 .container2, .container3 {

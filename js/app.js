@@ -55,6 +55,18 @@ var elementToChange = document.getElementsByTagName("body")[0];
 console.log(elementToChange);
 // elementToChange.style.cursor = "url('images/mallet_small_rotated_clip.png'), auto";
 
+// document.getElementsByTagName("body")[0].addEventListener("onload", resizeVideoPage);
+//
+// function resizeVideoPage(){
+//     var width = 1366;
+//     var height = 768;
+//     // var gameWindow;
+//     // gameWindow = window.open("", "", "width=100, height=100");
+//     window.resizeTo(width, height);
+//   }
+//
+// resizeVideoPage();
+
 function cursorchange() {
      elementToChange.style.cursor = "url('images/mallet_small_rotated_clip.png'), auto";
 }
